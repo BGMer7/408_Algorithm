@@ -1,0 +1,20 @@
+# 忽略编译生成的文件
+*.o
+*.out
+*.dll
+*.exe
+
+# 忽略依赖管理工具生成的目录
+node_modules/
+venv/
+.idea/
+
+# 忽略特定文件
+config.json
+secrets.json
+
+# 忽略所有日志文件
+*.log
+
+# 忽略所有 .tmp 扩展名的临时文件
+*.tmp
