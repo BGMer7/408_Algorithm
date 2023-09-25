@@ -4,7 +4,7 @@
 
 using namespace std;
 
-class Solution {
+class Leetcode88MergeTwoSortedArrays {
 private:
 public:
     // 最偷懒的方法，直接将nums2的数值全部赋值到nums1中，然后对nums1进行排序
@@ -52,7 +52,7 @@ public:
 int main() {
     vector<int> nums1 = {4, 5, 6, 0, 0, 0};
     vector<int> nums2 = {1, 2, 3};
-    Solution::merge_with_two_pointers(nums1, 3, nums2, 3);
+    Leetcode88MergeTwoSortedArrays::merge_with_two_pointers(nums1, 3, nums2, 3);
 
     ArrayPrinter ap;
 
