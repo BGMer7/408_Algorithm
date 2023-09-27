@@ -1,0 +1,9 @@
+//
+// Created by Gatsby on 2023/9/26.
+//
+
+#ifndef INC_408_ALGORITHM_SOLUTION_H
+#define INC_408_ALGORITHM_SOLUTION_H
+
+
+#endif //INC_408_ALGORITHM_SOLUTION_H
