@@ -73,4 +73,13 @@ int main() {
     Polynomial res = Solution::add(a1, b1);
 
     printPolynomial(res);
+
+    delete a1;
+    delete a2;
+    delete a3;
+    delete a4;
+    delete b1;
+    delete b2;
+    delete b3;
+    delete b4;
 }
