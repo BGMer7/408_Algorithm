@@ -18,3 +18,52 @@ struct ListNode {
 
     ListNode(int x, ListNode *next) : val(x), next(next) {}
 };
+
+class List {
+public:
+    /***
+     * 将数组转换为链表存储
+     * @param vals 链表的数值
+     * @param size 链表的长度
+     * @return
+     */
+    static ListNode *createLinkedList(const int vals[], int size) {
+        ListNode *root = new ListNode();
+        ListNode *head = root;
+
+        for (int i = 0; i < size - 1; ++i) {
+            int val = vals[i];
+            root->val = val;
+            root->next = nullptr;
+
+            ListNode *next = new ListNode;
+            next->val = vals[i + 1];
+            next->next = nullptr;
+
+            root->next = next;
+            root = root->next;
+        }
+
+        root->next = nullptr;
+
+        return head;
+    }
+
+    /***
+     * 整个链表new出来的空间需要销毁
+     * @param head
+     * @return
+     */
+    static bool destroyLinkedList(ListNode *head) {
+        while (head != nullptr) {
+            ListNode *next = head->next;
+            delete head;
+            head = next;
+        }
+
+        return true;
+    }
+};
+
+
+
