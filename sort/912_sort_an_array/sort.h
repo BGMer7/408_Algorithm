@@ -9,6 +9,12 @@
 #ifndef INC_408_ALGORITHM_SORT_H
 #define INC_408_ALGORITHM_SORT_H
 
+void swap(std::vector<int> &nums, int position1, int position2) {
+    int temp = nums[position1];
+    nums[position1] = nums[position2];
+    nums[position2] = temp;
+}
+
 /**
  * quick sort
  */
@@ -50,12 +56,30 @@ public:
                 break;
         }
     }
+};
 
-private:
-    static void swap(std::vector<int> &nums, int position1, int position2) {
-        int temp = nums[position1];
-        nums[position1] = nums[position2];
-        nums[position2] = temp;
+/**
+ * 依次给每个位置选择当前位置及以后最小的元素（交换当前元素与之后最小元素的位置）。
+ * 非稳定排序：不稳定举例： 排序前：5, 5*, 1, 7 排序后：1, 5*, 5, 7
+ * 空间复杂度O(1)
+ * 时间复杂度O(n2)
+ */
+class SelectSort {
+public:
+    static void sort(std::vector<int> &nums) {
+        int minIndex = -1;
+        unsigned int n = nums.size();
+
+        // i是已经排序的区域
+        for (int i = 0; i < n - 1; ++i) {
+            minIndex = i;
+            for (int j = i + 1; j < n; ++j) {
+                if (nums[j] < nums[minIndex]) {
+                    minIndex = j;
+                }
+            }
+            swap(nums, i, minIndex);
+        }
     }
 };
 
