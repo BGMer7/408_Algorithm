@@ -56,5 +56,5 @@ int main() {
 
     ArrayPrinter ap;
 
-    ArrayPrinter::printIntArray(nums1);
+    ArrayPrinter::print_int_array(nums1);
 }
