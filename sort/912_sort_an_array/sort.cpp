@@ -54,7 +54,16 @@ void test_insert() {
     cout << "------------------insert sort------------------" << endl;
     vector<int> nums = generate_random_vector(10, 20);
     ArrayPrinter::print_int_array(nums);
-    SelectSort::sort(nums);
+    InsertSort::sort(nums);
+    ArrayPrinter::print_int_array(nums);
+    cout << "-----------------------------------------------" << endl;
+}
+
+void test_shell() {
+    cout << "------------------shell sort------------------" << endl;
+    vector<int> nums = generate_random_vector(6, 6);
+    ArrayPrinter::print_int_array(nums);
+    ShellSort::sort(nums);
     ArrayPrinter::print_int_array(nums);
     cout << "-----------------------------------------------" << endl;
 }
@@ -63,5 +72,6 @@ void test_insert() {
 
 int main() {
     test_insert();
+    test_shell();
 
 }

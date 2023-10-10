@@ -84,11 +84,11 @@ public:
 };
 
 /**
- *
+ * 稳定排序
+ * 空间复杂度O(1)
+ * 时间复杂度O(n2)
  */
 class InsertSort {
-private:
-
 public:
     static void sort(std::vector<int> &nums) {
         unsigned int n = nums.size();
@@ -98,7 +98,7 @@ public:
 
             // 从i开始向前遍历，凡是比curr大，就往后挪一位，直到找到不大于的位置
             int j = i;
-            while (j >= 0 && nums[j] <= curr) {
+            while (j >= 0 && nums[j] > curr) {
                 nums[j + 1] = nums[j];
                 j--;
             }
@@ -108,5 +108,35 @@ public:
         }
     }
 };
+
+
+/**
+ * 希尔排序
+ * 稳定
+ * 空间复杂度O(1)
+ * 时间复杂度O(nlog2n)
+ */
+class ShellSort {
+public:
+    static void sort(std::vector<int> &nums) {
+        int n = nums.size();
+        int gap = n;
+
+        while (gap > 1) {
+            gap /= 2;
+            for (int i = gap; i < n; ++i) {
+                int curr = nums[i];
+                int j = i - gap;
+                while (j >= 0 && nums[j] > curr) {
+                    nums[j + gap] = nums[j];
+                    j -= gap;
+                }
+                nums[j + gap] = curr;
+                ArrayPrinter::print_int_array(nums);
+            }
+        }
+    }
+};
+
 
 #endif //INC_408_ALGORITHM_SORT_H
