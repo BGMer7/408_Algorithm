@@ -23,16 +23,45 @@ std::vector<int> generate_random_vector(int minLength, int maxLength) {
     return randomVector;
 }
 
+/**
+ * 冒泡排序的测试方法
+ */
+void test_bubble() {
+    cout << "------------------bubble sort------------------" << endl;
+    vector<int> nums = generate_random_vector(10, 20);
+    ArrayPrinter::print_int_array(nums);
+    BubbleSort::sort(nums);
+    ArrayPrinter::print_int_array(nums);
+    cout << "-----------------------------------------------" << endl;
+}
+
+/**
+ * 选择排序的测试方法
+ */
+void test_select() {
+    cout << "------------------select sort------------------" << endl;
+    vector<int> nums = generate_random_vector(10, 20);
+    ArrayPrinter::print_int_array(nums);
+    SelectSort::sort(nums);
+    ArrayPrinter::print_int_array(nums);
+    cout << "-----------------------------------------------" << endl;
+}
+
+/**
+ * 插入排序的测试方法
+ */
+void test_insert() {
+    cout << "------------------insert sort------------------" << endl;
+    vector<int> nums = generate_random_vector(10, 20);
+    ArrayPrinter::print_int_array(nums);
+    SelectSort::sort(nums);
+    ArrayPrinter::print_int_array(nums);
+    cout << "-----------------------------------------------" << endl;
+}
+
+
+
 int main() {
-    vector<int> nums1 = generate_random_vector(10, 20);
-    ArrayPrinter::print_int_array(nums1);
-    BubbleSort::sort(nums1);
-    ArrayPrinter::print_int_array(nums1);
-
-    vector<int> nums2 = generate_random_vector(10, 20);
-    vector<int> nums3 = generate_random_vector(10, 20);
-    vector<int> nums4 = generate_random_vector(10, 20);
-
-
+    test_insert();
 
 }

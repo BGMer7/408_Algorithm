@@ -83,4 +83,30 @@ public:
     }
 };
 
+/**
+ *
+ */
+class InsertSort {
+private:
+
+public:
+    static void sort(std::vector<int> &nums) {
+        unsigned int n = nums.size();
+
+        for (int i = 0; i < n - 1; ++i) {
+            int curr = nums[i + 1];
+
+            // 从i开始向前遍历，凡是比curr大，就往后挪一位，直到找到不大于的位置
+            int j = i;
+            while (j >= 0 && nums[j] <= curr) {
+                nums[j + 1] = nums[j];
+                j--;
+            }
+
+            //将curr插入腾出来的位置中
+            nums[j + 1] = curr;
+        }
+    }
+};
+
 #endif //INC_408_ALGORITHM_SORT_H
