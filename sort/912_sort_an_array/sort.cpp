@@ -68,10 +68,18 @@ void test_shell() {
     cout << "-----------------------------------------------" << endl;
 }
 
+void test_quick() {
+    cout << "------------------insert sort------------------" << endl;
+    vector<int> nums = generate_random_vector(10, 20);
+    ArrayPrinter::print_int_array(nums);
+    QuickSort::sort(nums);
+    ArrayPrinter::print_int_array(nums);
+    cout << "-----------------------------------------------" << endl;
+}
+
 
 
 int main() {
-    test_insert();
-    test_shell();
+    test_quick();
 
 }

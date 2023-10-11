@@ -16,19 +16,46 @@ void swap(std::vector<int> &nums, int position1, int position2) {
 }
 
 /**
- * quick sort
+ * 快速排序
+ * 不稳定
+ * 空间复杂度O(1)
+ * 时间复杂度O(nlog2n)
  */
 class QuickSort {
 private:
-    int partition(std::vector<int> &nums, int left, int right) {
-        int pivot = nums[right];
-        // todo
-        return -1;
+    static int partition(std::vector<int> &nums, int left, int right) {
+        int i = rand() % (right - left + 1) + left;
+        swap(nums, left, i);
+
+        int pivot = nums[left];
+
+        while (left < right) {
+            while (left < right && nums[right] >= pivot) {
+                right--;
+            }
+            nums[left] = nums[right];
+            while (left < right && nums[left] <= pivot) {
+                left++;
+            }
+            nums[right] = nums[left];
+        }
+
+        nums[left] = pivot;
+        return left;
+    }
+
+    static void recursionPartition(std::vector<int> &nums, int left, int right) // 一定要使用&nums作为引用，否则nums不会改变
+    {
+        if (left < right) {
+            int index = partition(nums, left, right);
+            recursionPartition(nums, left, index - 1);
+            recursionPartition(nums, index + 1, right);
+        }
     }
 
 public :
-    void quick_sort(std::vector<int> &nums) {
-
+    static void sort(std::vector<int> &nums) {
+        recursionPartition(nums, 0, nums.size() - 1);
     }
 };
 
