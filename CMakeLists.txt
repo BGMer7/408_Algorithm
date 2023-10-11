@@ -9,8 +9,6 @@ add_executable(408_algorithm
         2011/solution.cpp
         include/print.h
         2013/solution.cpp
-        sort/912_sort_an_array/sort.cpp
-        sort/912_sort_an_array/sort.h
 )
 
 add_executable(binary_search
@@ -29,6 +27,7 @@ add_executable(linkedlist
         linkedlist/876_middle_of_the_linked_list/middle_of_the_linked_list.cpp
         linkedlist/237_delete_node_in_a_linked_list/delete_node_in_a_linked_list.cpp
         linkedlist/141_linked_list_cycle/linked_list_cycle.h
+        linkedlist/143_reorder_list/reorder_list.h
 )
 
 add_executable(merge
