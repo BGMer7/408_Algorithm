@@ -36,3 +36,5 @@ add_executable(merge
 add_executable(sort sort/912_sort_an_array/sort.cpp
         sort/912_sort_an_array/sort.cpp
         sort/912_sort_an_array/sort.h)
+add_executable(array array/217_contains_duplicate/contains_duplicate.h
+        array/217_contains_duplicate/contains_dupicate.cpp)
