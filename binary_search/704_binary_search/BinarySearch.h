@@ -7,7 +7,7 @@
 #define INC_408_ALGORITHM_BINARY_SEARCH_H
 
 
-class binary_search {
+class BinarySearch {
 public:
     int search(std::vector<int> &nums, int target) {
         int left = 0;

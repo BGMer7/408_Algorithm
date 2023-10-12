@@ -2,8 +2,8 @@
 // Created by Gatsby on 2023/10/11.
 //
 
-#ifndef INC_408_ALGORITHM_REORDER_LIST_H
-#define INC_408_ALGORITHM_REORDER_LIST_H
+#ifndef INC_408_ALGORITHM_REORDERLIST_H
+#define INC_408_ALGORITHM_REORDERLIST_H
 
 
 #include "../listnode.h"
@@ -11,7 +11,7 @@
 
 using namespace std;
 
-class reorder_list {
+class ReorderList {
 public:
     void reorderList(ListNode *head) {
         if (head == nullptr || head->next == nullptr) {
@@ -42,4 +42,4 @@ public:
 };
 
 
-#endif //INC_408_ALGORITHM_REORDER_LIST_H
+#endif //INC_408_ALGORITHM_REORDERLIST_H

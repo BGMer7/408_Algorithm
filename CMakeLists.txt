@@ -12,7 +12,7 @@ add_executable(408_algorithm
 )
 
 add_executable(binary_search
-        binary_search/704_binary_search/binary_search.cpp
+        binary_search/704_binary_search/BinarySearch.cpp
 )
 
 add_executable(cskaoyan
@@ -27,7 +27,8 @@ add_executable(linkedlist
         linkedlist/876_middle_of_the_linked_list/middle_of_the_linked_list.cpp
         linkedlist/237_delete_node_in_a_linked_list/delete_node_in_a_linked_list.cpp
         linkedlist/141_linked_list_cycle/linked_list_cycle.h
-        linkedlist/143_reorder_list/reorder_list.h
+        linkedlist/143_reorder_list/ReorderList.h
+        linkedlist/83_remove_duplicates_from_sorted_list/remove_duplicates_from_list.h
 )
 
 add_executable(merge
@@ -37,4 +38,4 @@ add_executable(sort sort/912_sort_an_array/sort.cpp
         sort/912_sort_an_array/sort.cpp
         sort/912_sort_an_array/sort.h)
 add_executable(array array/217_contains_duplicate/contains_duplicate.h
-        array/217_contains_duplicate/contains_dupicate.cpp)
+        array/217_contains_duplicate/contains_duplicate.cpp)
