@@ -39,3 +39,6 @@ add_executable(sort sort/912_sort_an_array/sort.cpp
         sort/912_sort_an_array/sort.h)
 add_executable(array array/217_contains_duplicate/contains_duplicate.h
         array/217_contains_duplicate/contains_duplicate.cpp)
+
+add_executable(tree tree/589_nary_tree_preorder_traversal/nary_tree_preorder_traversal.cpp tree/589_nary_tree_preorder_traversal/nary_tree_preorder_traversal.h
+        tree/Node.h)
