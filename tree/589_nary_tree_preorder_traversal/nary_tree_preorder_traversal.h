@@ -13,8 +13,25 @@ using namespace std;
 
 class nary_tree_preorder_traversal {
 public:
+    /**
+     * leetcode官方递归题解
+     * @param root
+     * @return
+     */
     std::vector<int> preorder(Node *root) {
+        vector<int> res;
+        helper(root, res);
+        return res;
+    }
 
+    void helper(const Node *root, vector<int> &res) {
+        if (root == nullptr) {
+            return;
+        }
+        res.emplace_back(root->val);
+        for (Node* const &ch: root->children) {
+            helper(ch, res);
+        }
     }
 
     /**
@@ -33,11 +50,11 @@ public:
         q.push_back(root);
 
         while (!q.empty()) {
-            Node* node = q.front();
-            vector<Node*> children = node->children;
+            Node *node = q.front();
+            vector<Node *> children = node->children;
 
             if (!children.empty()) {
-                for (Node* child: children) {
+                for (Node *child: children) {
                     q.push_back(child);
                 }
             }
