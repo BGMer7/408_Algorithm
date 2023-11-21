@@ -9,6 +9,10 @@ add_executable(408_algorithm
         2011/solution.cpp
         include/print.h
         2013/solution.cpp
+        2019/solution.cpp
+        2019/solution.h
+        2012/solution.cpp
+        2012/solution.h
 )
 
 add_executable(binary_search
