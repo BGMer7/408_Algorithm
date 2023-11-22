@@ -35,6 +35,11 @@ public:
                 // 将队列的第一个节点取出
                 tree_node* node = queue.front();
                 int weight = node->weight;
+                // 只有叶子节点要计算WPL 很关键
+                if(node->right == nullptr && node->left == nullptr) {
+                    // wpl加上这个节点的路径权重
+                    wpl+=weight*weight;
+                }
                 // 如果左孩子非空，则放入队列等待下一层遍历
                 if (node->left!= nullptr) {
                     queue.push(node->left);
@@ -43,8 +48,7 @@ public:
                 if (node->right != nullptr) {
                     queue.push(node->right);
                 }
-                // wpl加上这个节点的路径权重
-                wpl+=weight*weight;
+
                 // 该节点已经计算完毕，节点出队
                 queue.pop();
             }
