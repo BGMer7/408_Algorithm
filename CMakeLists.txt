@@ -13,6 +13,8 @@ add_executable(408_algorithm
         2019/solution.h
         2012/solution.cpp
         2012/solution.h
+        2014/solution.cpp
+        2014/solution.h
 )
 
 add_executable(binary_search
