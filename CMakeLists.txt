@@ -5,19 +5,34 @@ set(CMAKE_CXX_STANDARD 14)
 
 include_directories(include)
 
-add_executable(408_algorithm
+add_executable(408_2011
         2011/solution.cpp
-        include/print.h
-        2013/solution.cpp
-        2019/solution.cpp
-        2019/solution.h
+)
+
+add_executable(408_2012
         2012/solution.cpp
         2012/solution.h
+)
+
+add_executable(408_2013
+        2013/solution.cpp
+)
+
+add_executable(408_2014
         2014/solution.cpp
         2014/solution.h
+)
+
+add_executable(408_2015
         2015/solution.cpp
         2015/solution.h
 )
+
+add_executable(408_2019
+        2019/solution.cpp
+        2019/solution.h
+)
+
 
 add_executable(binary_search
         binary_search/704_binary_search/BinarySearch.cpp
