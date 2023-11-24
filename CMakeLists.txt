@@ -5,33 +5,14 @@ set(CMAKE_CXX_STANDARD 14)
 
 include_directories(include)
 
-add_executable(408_2011
-        2011/solution.cpp
-)
+add_executable(408_2011 2011/solution.cpp)
+add_executable(408_2012 2012/solution.cpp 2012/solution.h)
+add_executable(408_2013 2013/solution.cpp)
+add_executable(408_2014 2014/solution.cpp 2014/solution.h)
+add_executable(408_2015 2015/solution.cpp 2015/solution.h)
+add_executable(408_2016 2016/solution.cpp 2016/solution.h)
 
-add_executable(408_2012
-        2012/solution.cpp
-        2012/solution.h
-)
-
-add_executable(408_2013
-        2013/solution.cpp
-)
-
-add_executable(408_2014
-        2014/solution.cpp
-        2014/solution.h
-)
-
-add_executable(408_2015
-        2015/solution.cpp
-        2015/solution.h
-)
-
-add_executable(408_2019
-        2019/solution.cpp
-        2019/solution.h
-)
+add_executable(408_2019 2019/solution.cpp 2019/solution.h)
 
 
 add_executable(binary_search
@@ -65,3 +46,4 @@ add_executable(array array/217_contains_duplicate/contains_duplicate.h
 
 add_executable(tree tree/589_nary_tree_preorder_traversal/nary_tree_preorder_traversal.cpp tree/589_nary_tree_preorder_traversal/nary_tree_preorder_traversal.h
         tree/Node.h)
+
