@@ -12,7 +12,7 @@ add_executable(408_2014 2014/solution.cpp 2014/solution.h)
 add_executable(408_2015 2015/solution.cpp 2015/solution.h)
 add_executable(408_2016 2016/solution.cpp 2016/solution.h)
 add_executable(408_2017 2017/solution.cpp 2017/solution.h)
-
+add_executable(408_2018 2018/solution.cpp 2018/solution.h)
 add_executable(408_2019 2019/solution.cpp 2019/solution.h)
 
 
