@@ -49,3 +49,4 @@ add_executable(array array/217_contains_duplicate/contains_duplicate.h
 add_executable(tree tree/589_nary_tree_preorder_traversal/nary_tree_preorder_traversal.cpp tree/589_nary_tree_preorder_traversal/nary_tree_preorder_traversal.h
         tree/Node.h)
 
+add_executable(408_2010 2010/solution.cpp 2010/solution.h)
