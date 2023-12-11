@@ -63,6 +63,31 @@ public:
 
         return true;
     }
+
+    /**
+     * 逆置链表
+     * @param node
+     * @return
+     */
+    static ListNode *reverse(ListNode *node) {
+        if (node == nullptr || node->next == nullptr) {
+            return node;
+        }
+
+        ListNode *rear = node;
+        ListNode *front = node;
+        front = rear->next;
+
+        while (front->next == nullptr) {
+            ListNode *tmp = front->next;
+            front->next = rear;
+            rear = front;
+            front = tmp;
+        }
+
+        node->next = nullptr;
+        return rear;
+    }
 };
 
 
